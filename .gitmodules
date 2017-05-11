@@ -1,3 +1,9 @@
 [submodule "vimrc/vim-monokai"]
 	path = vimrc/vim-monokai
 	url = https://github.com/crusoexia/vim-monokai
+[submodule "gnome-terminal-colors-monokai"]
+	path = gnome-terminal-colors-monokai
+	url = git://github.com/pricco/gnome-terminal-colors-monokai.git
+[submodule "monokai-gnome-terminal"]
+	path = monokai-gnome-terminal
+	url = https://github.com/cemmanouilidis/monokai-gnome-terminal.git
