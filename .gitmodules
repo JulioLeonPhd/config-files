@@ -7,3 +7,6 @@
 [submodule "monokai-gnome-terminal"]
 	path = monokai-gnome-terminal
 	url = https://github.com/cemmanouilidis/monokai-gnome-terminal.git
+[submodule "gnome-monokai"]
+	path = gnome-monokai
+	url = https://github.com/derrickdominic/gnome-terminal-colors-monokai.git
