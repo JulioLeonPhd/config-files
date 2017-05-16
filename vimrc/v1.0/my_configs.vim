@@ -30,3 +30,18 @@ nnoremap <C-w>e :SyntasticCheck<CR>
 
 " Still under research (own)
 set omnifunc=syntaxcomplete#Complete
+
+
+if has("gui_running")
+    " GUI is running or is about to start.
+    " Maximize gvim window (for an alternative on Windows, see simalt below).
+    set lines=60 columns=150
+else
+    " This is console Vim.
+    if exists("+lines")
+        set lines=50
+    endif
+    if exists("+columns")
+        set columns=100
+    endif
+endif
