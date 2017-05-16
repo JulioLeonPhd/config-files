@@ -1,0 +1,11 @@
+## This is a custom .bashrc code file
+
+#virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Add a new line at the end of the command prompt
+PS1=${PS1%?}
+PS1=${PS1%?}\n'$ '
+
+
