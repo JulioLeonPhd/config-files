@@ -7,6 +7,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 # Add a new line at the end of the command prompt
 # PS1=${PS1%?}
 # PS1=${PS1%?}\n'$ '
-export PS1="\[\e[01;30m\][\[\e[01;32m\]\u\[\e[01;30m\]@\[\e[01;34m\]\h\[\e[00;37m\]:\[\e[01;31m\]\w\[\e[01;30m\]]\n\\[\e[00;37m\]$\[$(tput sgr0)\] \[\e[00;37m\]"
 
+# With Bolds and monokai
+export PS1="\[\e[01;30m\][\[\e[01;32m\]\u\[\e[01;30m\]@\[\e[01;34m\]\h\[\e[00;37m\]:\[\e[01;31m\]\w\[\e[01;30m\]]\n\\[\e[00;37m\]$\[$(tput sgr0)\] \[\e[01;37m\]"
 
+# With Bolds and no monokai
+# export PS1="\[\e[01;30m\][\[\e[01;92m\]\u\[\e[01;30m\]@\[\e[01;94m\]\h\[\e[00;37m\]:\[\e[01;35m\]\w\[\e[01;30m\]]\n\\[\e[00;37m\]$\[$(tput sgr0)\] \[\e[01;37m\]"
+
+# No Bolds, no monokai
+# export PS1="\[\e[01;30m\][\[\e[00;92m\]\u\[\e[30m\]@\[\e[94m\]\h\[\e[01;37m\]:\[\e[00;35m\]\w\[\e[01;30m\]]\n\\[\e[00;37m\]$\[$(tput sgr0)\] \[\e[37m\]"
