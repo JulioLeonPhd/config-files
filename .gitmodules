@@ -10,3 +10,6 @@
 [submodule "gnome-monokai"]
 	path = gnome-monokai
 	url = https://github.com/derrickdominic/gnome-terminal-colors-monokai.git
+[submodule "vimrc/amix-vimrc"]
+	path = vimrc/amix-vimrc
+	url = https://github.com/amix/vimrc
