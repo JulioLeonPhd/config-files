@@ -31,3 +31,7 @@ set omnifunc=syntaxcomplete#Complete
 
 " For IDL
 autocmd BufEnter *.pro set syntax=idlang filetype=idlang
+
+" jj for <ESC>
+imap jj <ESC> 
+
