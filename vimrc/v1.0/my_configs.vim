@@ -12,7 +12,7 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=1
 set foldmethod=indent
-nnoremap <leader><C-space> za
+nnoremap <silent><leader><C-space> za
 
 " Auto open NERDTree if no argument
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -35,3 +35,16 @@ autocmd BufEnter *.pro set syntax=idlang filetype=idlang
 " jj for <ESC>
 imap jj <ESC> 
 
+if has("gui_running")
+    " GUI is running or is about to start.
+    " Maximize gvim window (for an alternative on Windows, see simalt below).
+    set lines=60 columns=150
+else
+    " This is console Vim.
+    if exists("+lines")
+        set lines=50
+    endif
+    if exists("+columns")
+        set columns=100
+    endif
+endif
