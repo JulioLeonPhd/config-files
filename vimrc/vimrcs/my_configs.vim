@@ -4,6 +4,9 @@ set nu
 " No line wrapping
 set nowrap
 
+" Lightline already tells us the mode
+set noshowmode
+
 " Highlight current line
 set cursorline
 
@@ -12,7 +15,7 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=1
 set foldmethod=indent
-nnoremap <silent><leader><C-space> za
+nnoremap <leader><C-space> za
 
 " Auto open NERDTree if no argument
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -27,24 +30,23 @@ execute pathogen#infect()
 " For LaTeX
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
 nnoremap <C-w>e :SyntasticCheck<CR> 
-set omnifunc=syntaxcomplete#Complete
 
-" For IDL
+" For IDL, Better Syntax highlighting
 autocmd BufEnter *.pro set syntax=idlang filetype=idlang
 
-" jj for <ESC>
-imap jj <ESC> 
+" <ESC> with jj 
+imap jj <ESC>
 
-if has("gui_running")
-    " GUI is running or is about to start.
-    " Maximize gvim window (for an alternative on Windows, see simalt below).
-    set lines=60 columns=150
-else
-    " This is console Vim.
-    if exists("+lines")
-        set lines=50
-    endif
-    if exists("+columns")
-        set columns=100
-    endif
-endif
+" Font Selection Override
+set gfn=Hack\ 9
+" set gfn=Hack\ Bold\ 8
+" set gfn=DejaVu\ Sans\ Mono\ Bold\ 9
+
+" Search and Replace word (Giorgio)
+nnoremap <leader>s :%s/\<<C-r><C-w>\>//gc<left><left><left>
+vnoremap <leader>s "hy:%s/<C-r>h//gc<left><left><left>
+
+" Column Line at 80
+" set cc=80
+
+
